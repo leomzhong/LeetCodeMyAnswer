@@ -29,14 +29,18 @@ public class KMP {
                 index++;
                 pIndex++;
             }
-            if (pIndex == needle.length())
+            if (pIndex == needle.length()) {
                 return haystack.substring(index - pIndex);
-            else {
-                if (pIndex > 0)
-                    pIndex = pa[pIndex - 1];
-                else
-                    index++;
+                // if we want to find all the position
+                // we can call:
+                // result.add(index - pIndex);
+                // index--;
+                // pIndex--;
             }
+            if (pIndex > 0)
+                pIndex = pa[pIndex - 1];
+            else
+                index++;
         }
         return null;
     }
