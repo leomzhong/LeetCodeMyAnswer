@@ -1,3 +1,7 @@
+/*
+ * For this way of binary search, if left > right, the right will always
+ * be less than target and left will always be larger than target
+ */
 public class SearchInsertPosition {
     public int searchInsert(int[] A, int target) {
         return binarySearch(A, target);
